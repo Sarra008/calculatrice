@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calcul.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function somm(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    c=x+y;
+    document.getElementById('res').value=c
+}
+function prod(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    c=x*y;
+    document.getElementById('res').value=c
+}
+function sous(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    c=x-y;
+    document.getElementById('res').value=c
+}
+function divi(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    if(y!=0){
+    c=x/y;
+    document.getElementById('res').value=c}
+    else alert('division par 0 impossible!!!')
+}
+function quo(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    if(y!=0){
+    c=Math.floor(x/y);
+    document.getElementById('res').value=c}
+    else alert('division par 0 impossible!!!')
+}
+function rac(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    if(y!=0){
+    c=Math.sqrt(x/y);
+    document.getElementById('res').value=c}
+    else alert('division par 0 impossible!!!')
+}
+function rest(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    if(y!=0){
+    c=x%y
+    document.getElementById('res').value=c}
+    else alert('division par 0 impossible!!!')
+}
+function pui(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    if(y!=0){
+    c=x**y
+    document.getElementById('res').value=c}
+    else alert('division par 0 impossible!!!')
+}
+function arr(){
+    x=Number(document.getElementById('a').value);
+    y=Number(document.getElementById('b').value);
+    if(y!=0){
+    c=Math.round(x/y)
+    document.getElementById('res').value=c}
+    else alert('division par 0 impossible!!!')
+}
+function moy(){
+    np=Number(document.getElementById('np').value);
+    nc=Number(document.getElementById('nc').value);
+    m=(np+nc)/2;
+    document.getElementById('mo').value=m
+}
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Calculatrice</legend>
+    <form action="">
+        a: <input type="text" id="a">
+        b: <input type="text" id="b"><br>
+        <input type="button" value="somme" onclick="somm()">
+        <input type="button" value="produit" onclick="prod()"><br>
+        <input type="button" value="soustraction" onclick="sous()">
+        <input type="button" value="division" onclick="divi()">
+        <br><input type="button" value="quotient" onclick="quo()">
+        <input type="button" value="racine carre" onclick="rac()">
+        <br><input type="button" value="reste division" onclick="rest()">
+        <input type="button" value="puissance" onclick="pui()">
+        <input type="button" value="arrondi" onclick="arr()">
+        <br>resultat: <input type="text" id="res">
+    </form>
+    </fieldset>
+    <fieldset id="file">
+        <legend id="leg">formulaire de moyenne</legend>
+        <form action="">
+                nom et prénom*: <input type="text"><br>
+                note de projet*: <input type="text" id="np"><br>
+                note de controle*: <input type="text" id="nc"><br>
+                <input type="button" value="calculer" onclick="moy()" id="button"><br>
+                moyenne des notes de controles*: <input type="text" id="mo">
+        </form>
+    </fieldset>
+</body>
+</html>
